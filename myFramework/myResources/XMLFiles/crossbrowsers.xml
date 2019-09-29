@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression Suite" thread-count="3" parallel="tests">
+  <test name="TestsonChrome">
+  <parameter name = "browser" value="Chrome"></parameter>
+    <classes>
+      <class name="com.testcases.LoginTestHRM"/>
+      <class name="com.testcases.TrainingMenuValidation"/>
+    </classes>
+  </test> <!-- Test -->
+  
+    <test name="TestsonFirefox">
+  <parameter name = "browser" value="Firefox"></parameter>
+    <classes>
+      <class name="com.testcases.LoginTestHRM"/>
+      <class name="com.testcases.TrainingMenuValidation"/>
+    </classes>
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->

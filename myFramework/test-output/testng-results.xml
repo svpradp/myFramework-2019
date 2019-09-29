@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+    <line>
+      <![CDATA[Before Suite invoked]]>
+    </line>
+    <line>
+      <![CDATA[Before Suite invocation done, report initiated]]>
+    </line>
+    <line>
+      <![CDATA[BeforeClass, driver initiation started]]>
+    </line>
+    <line>
+      <![CDATA[BeforeClass, driver initiation done]]>
+    </line>
+    <line>
+      <![CDATA[TC001 Started]]>
+    </line>
+    <line>
+      <![CDATA[TC001 Complete]]>
+    </line>
+    <line>
+      <![CDATA[Aftermethod initited. Test is about to end.]]>
+    </line>
+    <line>
+      <![CDATA[Aftermethod complete. Report appended with this test]]>
+    </line>
+    <line>
+      <![CDATA[TC002 Started]]>
+    </line>
+    <line>
+      <![CDATA[TC002 LogoutTest Complete]]>
+    </line>
+    <line>
+      <![CDATA[Aftermethod initited. Test is about to end.]]>
+    </line>
+    <line>
+      <![CDATA[Aftermethod complete. Report appended with this test]]>
+    </line>
+    <line>
+      <![CDATA[AfterClass, About to quit browser]]>
+    </line>
+    <line>
+      <![CDATA[AfterClass, Browser Quit done]]>
+    </line>
+  </reporter-output>
+  <suite name="Regression Suite" duration-ms="24852" started-at="2019-09-29T22:56:54Z" finished-at="2019-09-29T22:57:19Z">
+    <groups>
+    </groups>
+    <test name="TestsonChrome" duration-ms="24852" started-at="2019-09-29T22:56:54Z" finished-at="2019-09-29T22:57:19Z">
+      <class name="com.testcases.LoginTestHRM">
+        <test-method status="PASS" signature="invokeObjects()[pri:0, instance:com.testcases.LoginTestHRM@3108bc]" name="invokeObjects" is-config="true" duration-ms="1231" started-at="2019-09-29T17:56:53Z" finished-at="2019-09-29T17:56:54Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Before Suite invoked]]>
+            </line>
+            <line>
+              <![CDATA[Before Suite invocation done, report initiated]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- invokeObjects -->
+        <test-method status="PASS" signature="launchdriver(java.lang.String)[pri:0, instance:com.testcases.LoginTestHRM@3108bc]" name="launchdriver" is-config="true" duration-ms="7483" started-at="2019-09-29T17:56:54Z" finished-at="2019-09-29T17:57:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[BeforeClass, driver initiation started]]>
+            </line>
+            <line>
+              <![CDATA[BeforeClass, driver initiation done]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- launchdriver -->
+        <test-method status="PASS" signature="TC001_LogintoHRM()[pri:1, instance:com.testcases.LoginTestHRM@3108bc]" name="TC001_LogintoHRM" duration-ms="9957" started-at="2019-09-29T17:57:02Z" description="Test Description - Logging to HRM Portal " finished-at="2019-09-29T17:57:11Z">
+          <reporter-output>
+            <line>
+              <![CDATA[TC001 Started]]>
+            </line>
+            <line>
+              <![CDATA[TC001 Complete]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TC001_LogintoHRM -->
+        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.testcases.LoginTestHRM@3108bc]" name="tearDownMethod" is-config="true" duration-ms="1084" started-at="2019-09-29T17:57:11Z" finished-at="2019-09-29T17:57:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC001_LogintoHRM status=SUCCESS method=LoginTestHRM.TC001_LogintoHRM()[pri:1, instance:com.testcases.LoginTestHRM@3108bc] output=TC001 Started]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Aftermethod initited. Test is about to end.]]>
+            </line>
+            <line>
+              <![CDATA[Aftermethod complete. Report appended with this test]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method status="PASS" signature="TC002_LogoutTest()[pri:0, instance:com.testcases.LoginTestHRM@3108bc]" name="TC002_LogoutTest" duration-ms="4345" started-at="2019-09-29T17:57:13Z" depends-on-methods="com.testcases.LoginTestHRM.TC001_LogintoHRM" finished-at="2019-09-29T17:57:17Z">
+          <reporter-output>
+            <line>
+              <![CDATA[TC002 Started]]>
+            </line>
+            <line>
+              <![CDATA[TC002 LogoutTest Complete]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TC002_LogoutTest -->
+        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.testcases.LoginTestHRM@3108bc]" name="tearDownMethod" is-config="true" duration-ms="720" started-at="2019-09-29T17:57:17Z" finished-at="2019-09-29T17:57:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC002_LogoutTest status=SUCCESS method=LoginTestHRM.TC002_LogoutTest()[pri:0, instance:com.testcases.LoginTestHRM@3108bc] output=TC002 Started]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Aftermethod initited. Test is about to end.]]>
+            </line>
+            <line>
+              <![CDATA[Aftermethod complete. Report appended with this test]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.testcases.LoginTestHRM@3108bc]" name="tearDownClass" is-config="true" duration-ms="1223" started-at="2019-09-29T17:57:18Z" finished-at="2019-09-29T17:57:19Z">
+          <reporter-output>
+            <line>
+              <![CDATA[AfterClass, About to quit browser]]>
+            </line>
+            <line>
+              <![CDATA[AfterClass, Browser Quit done]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.testcases.LoginTestHRM -->
+    </test> <!-- TestsonChrome -->
+  </suite> <!-- Regression Suite -->
+</testng-results>

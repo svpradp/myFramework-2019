@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.testcases.LoginTestHRM">
+        <methods>
+          <include name="launchdriver"/>
+          <include name="TC001_Login"/>
+          <include name="tearDownClass"/>
+          <include name="TC002_ValidateURL"/>
+          <include name="invokeObjects"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.testcases.LoginTestHRM -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

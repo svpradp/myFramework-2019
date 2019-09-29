@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Regression Suite]">
+  <test name="TestsonChrome(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="com.testcases.TrainingMenuValidation">
+        <methods>
+          <include name="launchdriver"/>
+          <include name="tearDownClass"/>
+          <include name="invokeObjects"/>
+          <include name="TC003_FetchTrainingtabSubmenu"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- com.testcases.TrainingMenuValidation -->
+    </classes>
+  </test> <!-- TestsonChrome(failed) -->
+</suite> <!-- Failed suite [Regression Suite] -->
