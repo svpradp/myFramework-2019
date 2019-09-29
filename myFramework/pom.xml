@@ -58,7 +58,7 @@
 				<version>3.0.0-M3</version>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>myResources\XMLFiles\testng.xml</suiteXmlFile>
+						<suiteXmlFile>myResources\XMLFiles\sampletest.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
