@@ -49,9 +49,9 @@ public class BaseClass {
 		
 	}
 	
-	@Parameters("browser")
+	@Parameters({"browser","appURL"})
 	@BeforeClass
-	public void launchdriver(String browser) {
+	public void launchdriver(String browser, String url) {
 		
 		Reporter.log("BeforeClass, driver initiation started", true);
 		
@@ -61,7 +61,7 @@ public class BaseClass {
 		
 		//driver = new BrowserFactory().startApplication(new ConfigDataProvider().getBrowser(), new ConfigDataProvider().getqaURL());
 		
-		driver = new BrowserFactory().startApplication(browser, new ConfigDataProvider().getqaURL());
+		driver = new BrowserFactory().startApplication(browser, url);
 		
 		Reporter.log("BeforeClass, driver initiation done", true);
 		
