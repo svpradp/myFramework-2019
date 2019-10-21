@@ -114,7 +114,7 @@ public class Helper {
 			System.out.println(e.getMessage());
 		}
 
-		js.executeScript("arguments[0].setAttribute('style','border: solid 2px white')", ele);
+		js.executeScript("arguments[0].setAttribute('style','border: solid 2px white');", ele);
 
 	}
 

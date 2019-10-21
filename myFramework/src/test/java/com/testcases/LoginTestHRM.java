@@ -39,9 +39,9 @@ public class LoginTestHRM extends BaseClass {
 		mylog4j.error("This is error message");
 		
 		
-		Reporter.log("TC001 Started", true);
+		Reporter.log("TC001 Started", true); //--> From TestNG
 		
-		logger = report.createTest("TC001_LogintoHRM");
+		logger = report.createTest("TC001_LogintoHRM"); //ExtentTest is logger :: ExtentReports is report
 
 		loginpageObj = PageFactory.initElements(driver, Page_LoginPageHRM.class);
 
