@@ -41,9 +41,9 @@ public class TrainingMenuValidation extends BaseClass{
 		
 		logout = PageFactory.initElements(driver, Page_Logout.class);
 
-		//login.fn_login(excel.getStringData("Sheet1", 1, 0), excel.getStringData("Sheet1", 1, 1)); --> Mukesh correction
+		login.fn_login(excel.getStringData("Sheet1", 1, 0), excel.getStringData("Sheet1", 1, 1)); //--> Mukesh correction
 		
-		login.fn_login(new ExcelDataProvider().getStringData("Sheet1", 1, 0), new ExcelDataProvider().getStringData("Sheet1", 1, 1));
+		//login.fn_login(new ExcelDataProvider().getStringData("Sheet1", 1, 0), new ExcelDataProvider().getStringData("Sheet1", 1, 1));
 		
 		login.validateURL();
 		

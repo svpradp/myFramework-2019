@@ -31,6 +31,10 @@ public class AddEmployee extends BaseClass{
 		
 		logger = BaseClass.report.createTest("TC004_AddEmployee");
 		
+		//FACING NULL POINTER HERE - TRIED BOTH THE OPTIONS BELOW
+		
+		//loginPageObj.fn_login(excel.getStringData("Sheet1", 1, 0), excel.getStringData("Sheet1", 1, 1));
+		
 		loginPageObj.fn_login(new ExcelDataProvider().getStringData("Sheet1", 1, 0), new ExcelDataProvider().getStringData("Sheet1", 1, 1));
 		
 		logger.pass("Login Data provided succesfully");

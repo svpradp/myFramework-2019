@@ -4,9 +4,9 @@
 <test name="TestsonChrome">
   <parameter name = "browser" value="Chrome"></parameter>
     <classes>
-      <class name="com.testcases.LoginTestHRM"/>
-      <class name="com.testcases.AddEmployee"/>
-      <!-- <class name="com.testcases.TrainingMenuValidation"/> -->
+      <!-- <class name="com.testcases.LoginTestHRM"/>
+      <class name="com.testcases.TrainingMenuValidation"/> -->
+       <class name="com.testcases.AddEmployee"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
