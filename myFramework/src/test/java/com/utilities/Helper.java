@@ -70,8 +70,8 @@ public class Helper {
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.visibilityOf(ele)); // ensure the element is visible to the driver
 
-		// Not sure why below is required, hence commented
-		// WebElement ele=wait.until(ExpectedConditions.elementToBeClickable(element));
+		//Not sure why below is required, hence commented
+		wait.until(ExpectedConditions.elementToBeClickable(ele));
 
 		highlightElement(driver, ele); // highlight that element per method below
 

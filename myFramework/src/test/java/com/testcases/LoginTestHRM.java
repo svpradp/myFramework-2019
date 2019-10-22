@@ -54,8 +54,6 @@ public class LoginTestHRM extends BaseClass {
 		loginpageObj.validateURL();
 		
 		Reporter.log("TC001 Complete", true);
-		
-		
 
 	}
 

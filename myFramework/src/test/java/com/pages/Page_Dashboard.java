@@ -38,6 +38,13 @@ public class Page_Dashboard {
 	
 	//Add Course + icon
 	@FindBy(xpath="//i[contains(.,'add')]") WebElement addCourse;
+	
+	//PIM Module
+	@FindBy(xpath="//span[contains(text(),'PIM')]") WebElement pim;
+	
+	//Add Employee
+	@FindBy(xpath="//span[contains(text(),'PIM')]//following::span[text()='Add Employee']") WebElement addEmp;
+	
 
 	public void fn_traningmenucheck() {
 
@@ -63,6 +70,13 @@ public class Page_Dashboard {
 		Helper.waitforWebElement(driver, courses, 20).click();
 		
 		Helper.waitforWebElement(driver, addCourse, 10).click();
+	}
+	
+	
+	public void fn_addEmployeenav() 
+	{
+		Helper.waitforWebElement(driver,pim, 20).click();
+		Helper.waitforWebElement(driver, addEmp, 20).click();
 	}
 
 }
