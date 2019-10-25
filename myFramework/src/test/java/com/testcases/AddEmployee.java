@@ -19,15 +19,16 @@ public class AddEmployee extends BaseClass{
 	
 	
 	@Test
-	public void addEmployee()
+	public void addEmployee() throws Exception
 	{
 		
 		Reporter.log("TC004 - Add Employee Started",true);
 		
 		//Objects initiation
-		PageFactory.initElements(driver, Page_LoginPageHRM.class);
-		PageFactory.initElements(driver, Page_AddEmployee.class);
-		PageFactory.initElements(driver, Page_Logout.class);
+		loginPageObj = PageFactory.initElements(driver, Page_LoginPageHRM.class);
+		addEmpObj = PageFactory.initElements(driver, Page_AddEmployee.class);
+		dashboardObj = PageFactory.initElements(driver, Page_Dashboard.class);
+		logoutPageObj = PageFactory.initElements(driver, Page_Logout.class);
 		
 		logger = BaseClass.report.createTest("TC004_AddEmployee");
 		
@@ -43,12 +44,12 @@ public class AddEmployee extends BaseClass{
 		
 		dashboardObj.fn_addEmployeenav();
 		
+		addEmpObj.enterDetails();
+		
 		Reporter.log("TC004 - Add Employee End",true);
 		
 		logoutPageObj.logout();
 		
 	}
 	
-	
-
 }

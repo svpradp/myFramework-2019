@@ -35,8 +35,8 @@ public class Helper {
 	// Switch to Frame. Wait until frame to be available and then switch to it
 
 	public static void switchtoFrame(WebDriver driver, WebElement frameEle) {
-		//wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameEle));
-		
+		// wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameEle));
+
 		new WebDriverWait(driver, 30).until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameEle));
 	}
 
@@ -51,9 +51,9 @@ public class Helper {
 		return wait.until(ExpectedConditions.invisibilityOf(ele));
 	}
 
-	//this method returns currrent date in the expected format
+	// this method returns currrent date in the expected format
 	public static String getCurrentDate() {
-		
+
 		DateFormat customFormat = new SimpleDateFormat("MM-dd-yy_HH_mm_ss");
 
 		Date currentDate = new Date();
@@ -68,9 +68,9 @@ public class Helper {
 	public static WebElement waitforWebElement(WebDriver driver, WebElement ele, int time) {
 
 		WebDriverWait wait = new WebDriverWait(driver, 30);
+		
 		wait.until(ExpectedConditions.visibilityOf(ele)); // ensure the element is visible to the driver
 
-		//Not sure why below is required, hence commented
 		wait.until(ExpectedConditions.elementToBeClickable(ele));
 
 		highlightElement(driver, ele); // highlight that element per method below
@@ -85,9 +85,9 @@ public class Helper {
 				+ getCurrentDate() + ".png";
 
 		try {
-			
-			TakesScreenshot ts = (TakesScreenshot)driver;
-			
+
+			TakesScreenshot ts = (TakesScreenshot) driver;
+
 			File src = ts.getScreenshotAs(OutputType.FILE);
 
 			FileHandler.copy(src, new File(screenshotpath));
@@ -102,7 +102,9 @@ public class Helper {
 	}
 
 	public static void highlightElement(WebDriver driver, WebElement ele) {
+		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
+		
 
 		js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", ele);
 
@@ -115,7 +117,17 @@ public class Helper {
 		}
 
 		js.executeScript("arguments[0].setAttribute('style','border: solid 2px white');", ele);
+		
+		
 
+	}
+	
+	public static void scrollintoview(WebDriver driver, WebElement ele) {
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		
+		js.executeScript("arguments[0].scrollIntoView(true);", ele);
+		
 	}
 
 }
