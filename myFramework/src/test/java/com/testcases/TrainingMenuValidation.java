@@ -8,7 +8,6 @@ import org.testng.annotations.Test;
 import com.pages.Page_Dashboard;
 import com.pages.Page_LoginPageHRM;
 import com.pages.Page_Logout;
-import com.utilities.ExcelDataProvider; //-> Added from Mukesh's correction
 
 public class TrainingMenuValidation extends BaseClass{
 	

@@ -24,7 +24,7 @@ public class AddEmployee extends BaseClass{
 		
 		Reporter.log("TC004 - Add Employee Started",true);
 		
-		//Objects initiation
+		//Page Objects initiation using PageFactory
 		loginPageObj = PageFactory.initElements(driver, Page_LoginPageHRM.class);
 		addEmpObj = PageFactory.initElements(driver, Page_AddEmployee.class);
 		dashboardObj = PageFactory.initElements(driver, Page_Dashboard.class);

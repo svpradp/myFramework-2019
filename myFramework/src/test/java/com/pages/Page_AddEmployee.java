@@ -2,12 +2,9 @@ package com.pages;
 
 import java.util.List;
 
-import org.apache.poi.util.SystemOutLogger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.testng.Assert;
-import org.testng.Reporter;
 import org.testng.asserts.SoftAssert;
 
 import com.utilities.Helper;
@@ -15,9 +12,13 @@ import com.utilities.Helper;
 public class Page_AddEmployee {
 
 	WebDriver driver;
-
+	
+	//this keyword is always used to initialize class/global variable
+	//this keyword is always used in Page Object classes as a constructor
+	
 	public Page_AddEmployee(WebDriver ldriver) {
-		this.driver = ldriver;
+		driver = ldriver;
+
 	}
 
 	// Add Employee - Pop Up
