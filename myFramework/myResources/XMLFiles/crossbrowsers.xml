@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Regression Suite" thread-count="3" parallel="tests">
-  <test name="TestsonChrome">
+<suite name="OrangeHRM Test Suite" thread-count="3">
+  <test name="TestsonChrome" parallel="methods">
   <parameter name = "browser" value="Chrome"></parameter>
     <classes>
       <class name="com.testcases.LoginTestHRM"/>
       <class name="com.testcases.TrainingMenuValidation"/>
+      <class name="com.testcases.AddEmployee"/>
     </classes>
   </test> <!-- Test -->
   
-    <test name="TestsonFirefox">
+    <test name="TestsonFirefox" parallel="methods">
   <parameter name = "browser" value="Firefox"></parameter>
     <classes>
       <class name="com.testcases.LoginTestHRM"/>
       <class name="com.testcases.TrainingMenuValidation"/>
+      <class name="com.testcases.AddEmployee"/>
     </classes>
   </test> <!-- Test -->
   
