@@ -1,6 +1,5 @@
 package com.testcases;
 
-import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
@@ -8,58 +7,46 @@ import org.testng.annotations.Test;
 import com.pages.Page_Dashboard;
 import com.pages.Page_LoginPageHRM;
 import com.pages.Page_Logout;
+import com.utilities.ExcelDataProvider;
 
 public class TrainingMenuValidation extends BaseClass{
 	
-	Page_LoginPageHRM login;
-	Page_Dashboard dashboard;
-	Page_Logout logout;
-	
-	private static Logger mylog4j = Logger.getLogger(TrainingMenuValidation.class);
+	Page_LoginPageHRM loginObj;
+	Page_Logout logoutObj;
+	Page_Dashboard dashObj;
 	
 	@Test
-	public void TC003_FetchTrainingtabSubmenu()
-	{
-	
-		// For Log4j
-		mylog4j.debug("This is debug message");
-		mylog4j.info("This is info message");
-		mylog4j.warn("This is warn message");
-		mylog4j.fatal("This is fatal message");
-		mylog4j.error("This is error message");
+	public void TC003_FetchTrainingMenu() {
 		
+		Reporter.log("TC003_FetchTrainingMenu Started",true);
 		
+		logger = BaseClass.report.createTest("TC003_FetchTrainingMenu");
 		
-		Reporter.log("TC003 Started", true);
+		Reporter.log("TC003_Initiating Page objects",true);
 		
-		//logger=report.createTest("TC003_FetchTrainingtabSubmenu");  --> From Mukesh
+		loginObj = PageFactory.initElements(driver, Page_LoginPageHRM.class);
+		logoutObj = PageFactory.initElements(driver, Page_Logout.class);
+		dashObj = PageFactory.initElements(driver, Page_Dashboard.class);
 		
-		logger= BaseClass.report.createTest("TC003_FetchTrainingtabSubmenu");
+		Reporter.log("TC003_Initiating Page objects - Done",true);
 		
-		login = PageFactory.initElements(driver, Page_LoginPageHRM.class);
+		loginObj.fn_login(new ExcelDataProvider().getStringData("Sheet1", 1, 0), new ExcelDataProvider().getStringData("Sheet1", 1, 1));
 		
-		logout = PageFactory.initElements(driver, Page_Logout.class);
-
-		login.fn_login(excel.getStringData("Sheet1", 1, 0), excel.getStringData("Sheet1", 1, 1)); //--> Mukesh correction
+		loginObj.validateURL();
 		
-		//login.fn_login(new ExcelDataProvider().getStringData("Sheet1", 1, 0), new ExcelDataProvider().getStringData("Sheet1", 1, 1));
+		dashObj.fn_traningmenucheck();
 		
-		login.validateURL();
-		
-		//validating dashboard page
-		
-		dashboard = PageFactory.initElements(driver, Page_Dashboard.class);
-		
-		dashboard.fn_traningmenucheck();
-		
-		dashboard.fn_swithtoCoursesframe();
+		dashObj.fn_swithtoCoursesframe();
 			
 		logger.pass("Fetched all the submenus under training");
 		
-		Reporter.log("TC003 Complete", true);
+		Reporter.log("TC003_FetchTrainingMenu", true);
 		
-		logout.logout();
+		logoutObj.logout();
 		
 	}
 	
+	
+	
+
 }

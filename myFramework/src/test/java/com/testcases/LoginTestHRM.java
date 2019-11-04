@@ -44,6 +44,8 @@ public class LoginTestHRM extends BaseClass {
 		logger = report.createTest("TC001_LogintoHRM"); //ExtentTest is logger :: ExtentReports is report
 
 		loginpageObj = PageFactory.initElements(driver, Page_LoginPageHRM.class);
+		
+		Reporter.log("TC001_Initiated Page objects for LoginTestHRM", true);
 
 		//loginpageObj.fn_login(excel.getStringData("Sheet1", 1, 0), excel.getStringData("Sheet1", 1, 1)); --> commented after cross browser testing
 		

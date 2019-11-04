@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="OrangeHRM Test Suite" thread-count="3">
-  <test name="TestsonChrome" parallel="methods">
+<suite name="OrangeHRM Test Suite" thread-count="3" parallel="classes">
+  <test name="TestsonChrome">
   <parameter name = "browser" value="Chrome"></parameter>
     <classes>
       <class name="com.testcases.LoginTestHRM"/>
@@ -10,7 +10,7 @@
     </classes>
   </test> <!-- Test -->
   
-    <test name="TestsonFirefox" parallel="methods">
+    <test name="TestsonFirefox">
   <parameter name = "browser" value="Firefox"></parameter>
     <classes>
       <class name="com.testcases.LoginTestHRM"/>
