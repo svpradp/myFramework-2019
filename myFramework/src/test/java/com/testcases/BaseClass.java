@@ -54,14 +54,14 @@ public class BaseClass {
 		
 	    //configuration items to change the look and feel
         //add content, manage tests etc
-		htmlreporter.config().setReportName("Test Results Report");
+		htmlreporter.config().setReportName("Metro Open ROADM - Regression Test Report");
 		htmlreporter.config().setAutoCreateRelativePathMedia(true);
 		htmlreporter.config().setDocumentTitle("Orange HRM Report");
 		htmlreporter.config().setEncoding("utf-8");
 		htmlreporter.config().setJS("Status Report");
 		htmlreporter.config().setProtocol(Protocol.HTTPS);
 		htmlreporter.config().setTheme(Theme.STANDARD);
-		htmlreporter.config().setTimeStampFormat("MMM dd, yyyy HH:mm:ss");
+		htmlreporter.config().setTimeStampFormat("MMM dd yyyy HH:mm");
 		
 		extentReport = new ExtentReports();
 		
