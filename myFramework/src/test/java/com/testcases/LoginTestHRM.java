@@ -1,6 +1,5 @@
 package com.testcases;
 
-import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
@@ -12,7 +11,7 @@ import com.utilities.ExcelDataProvider;
 
 public class LoginTestHRM extends BaseClass {
 	
-	private static Logger mylog4j = Logger.getLogger(LoginTestHRM.class);
+	//private static Logger mylog4j = Logger.getLogger(LoginTestHRM.class);
 
 	// WebDriver driver; ---> driver is from Baseclass
 	
@@ -64,13 +63,6 @@ public class LoginTestHRM extends BaseClass {
 
 	@Test(dependsOnMethods = "TC001_LogintoHRM")
 	public void TC002_LogoutTest() {
-		
-		/*// For Log4j
-		mylog4j.debug("This is debug message");
-		mylog4j.info("This is info message");
-		mylog4j.warn("This is warn message");
-		mylog4j.fatal("This is fatal message");
-		mylog4j.error("This is error message");*/
 		
 		
 		Reporter.log("TC002 Started", true);

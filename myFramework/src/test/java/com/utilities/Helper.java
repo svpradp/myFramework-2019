@@ -94,7 +94,8 @@ public class Helper {
 
 			System.out.println("Error at Taking screenshot --> " + e.getMessage());
 		}
-
+		
+		System.out.println("DEBUG: Fetched Screenshot Path: "+screenshotpath);
 		return screenshotpath;
 
 	}

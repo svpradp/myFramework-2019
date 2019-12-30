@@ -1,6 +1,5 @@
 package com.testcases;
 
-import org.apache.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
@@ -21,15 +20,6 @@ public class Ignore_TrainingMenuValidation extends BaseClass{
 	public void TC003_FetchTrainingtabSubmenu()
 	{
 	
-		/*// For Log4j
-		mylog4j.debug("This is debug message");
-		mylog4j.info("This is info message");
-		mylog4j.warn("This is warn message");
-		mylog4j.fatal("This is fatal message");
-		mylog4j.error("This is error message");*/
-		
-		
-		
 		Reporter.log("TC003 Started", true);
 		
 		//logger=report.createTest("TC003_FetchTrainingtabSubmenu");  --> From Mukesh

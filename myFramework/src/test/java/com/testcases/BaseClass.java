@@ -29,9 +29,15 @@ public class BaseClass {
 	public WebDriver driver;
 	public ExcelDataProvider excel;
 	public ConfigDataProvider config;
+	public Helper helper;
+	
+	/* Extent Report Related */
+	public ExtentHtmlReporter htmlreporter;
 	public static ExtentReports extentReport; //--> From Mukesh - changed to static
 	public ExtentTest extentTest;
-	public Helper helper;
+	
+	//public ExtentReports extentReport;
+	
 	
 	// Excel gets loaded before test suite executes
 	@BeforeSuite 
@@ -42,8 +48,9 @@ public class BaseClass {
 		excel = new ExcelDataProvider();
 		config = new ConfigDataProvider();
 		
-		ExtentHtmlReporter htmlreporter = new ExtentHtmlReporter(new File(System.getProperty("user.dir")+"./myResources/Reports/"+Helper.getCurrentDate()+".html"));
+		//htmlreporter = new ExtentHtmlReporter(new File(System.getProperty("user.dir")+"./myResources/Reports/"+Helper.getCurrentDate()+".html"));
 		
+		htmlreporter = new ExtentHtmlReporter(new File(System.getProperty("user.dir")+"./myResources/Reports/TestExecutionReport.html"));
 		
 	    //configuration items to change the look and feel
         //add content, manage tests etc
@@ -148,6 +155,8 @@ public class BaseClass {
 		extentReport.flush();
 		
 		Reporter.log("Report appended with this test result", true);
+		
+		
 	
 	}
 
