@@ -18,6 +18,7 @@ public class ConfigDataProvider {
 			prop = new Properties();
 			
 			prop.load(fis);
+			
 		} catch (Exception e) {
 			
 			System.out.println("Unable to load file: "+e.getMessage());

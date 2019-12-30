@@ -93,11 +93,9 @@
 					<suiteXmlFiles>
 						<suiteXmlFile>myResources\XMLFiles\${xmlFile}</suiteXmlFile>
 					</suiteXmlFiles>
-
 					<systemPropertyVariables>
 						<executionURL>${appURL}</executionURL>
 					</systemPropertyVariables>
-
 				</configuration>
 			</plugin>
 		</plugins>

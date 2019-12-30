@@ -18,8 +18,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class Helper {
 
 	/*
-	 * To Capture Screenshot To Handle Frames To Handle Alerts Multiple windows
-	 * method to sync issues JavaScript Executor Highlight Element
+	 * To Capture Screenshot, To Handle Frames, To Handle Alerts, Multiple windows
+	 * method to sync issues, JavaScript Executor, Highlight Element
 	 */
 
 	// Methods related to waits
@@ -28,8 +28,6 @@ public class Helper {
 	public Helper(WebDriver driver, int time) {
 
 		wait = new WebDriverWait(driver, 30);
-
-		// wait=new WebDriverWait(driver, Duration.ofSeconds(30));
 	}
 
 	// Switch to Frame. Wait until frame to be available and then switch to it

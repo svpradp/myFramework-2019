@@ -41,7 +41,7 @@ public class BrowserFactory {
 		// Page load timeout
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
-		// implicit wait - For webelements before the script fails
+		// implicit wait - For WebElements before the script fails or throws an error
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.get(appUrl);
 

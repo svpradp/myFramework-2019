@@ -15,18 +15,18 @@ public class Ignore_TrainingMenuValidation extends BaseClass{
 	Page_Dashboard dashboard;
 	Page_Logout logout;
 	
-	private static Logger mylog4j = Logger.getLogger(Ignore_TrainingMenuValidation.class);
+	//private static Logger mylog4j = Logger.getLogger(Ignore_TrainingMenuValidation.class);
 	
 	@Test
 	public void TC003_FetchTrainingtabSubmenu()
 	{
 	
-		// For Log4j
+		/*// For Log4j
 		mylog4j.debug("This is debug message");
 		mylog4j.info("This is info message");
 		mylog4j.warn("This is warn message");
 		mylog4j.fatal("This is fatal message");
-		mylog4j.error("This is error message");
+		mylog4j.error("This is error message");*/
 		
 		
 		
@@ -34,7 +34,7 @@ public class Ignore_TrainingMenuValidation extends BaseClass{
 		
 		//logger=report.createTest("TC003_FetchTrainingtabSubmenu");  --> From Mukesh
 		
-		logger= BaseClass.report.createTest("TC003_FetchTrainingtabSubmenu");
+		extentTest= BaseClass.extentReport.createTest("TC003_FetchTrainingtabSubmenu");
 		
 		login = PageFactory.initElements(driver, Page_LoginPageHRM.class);
 		
@@ -54,7 +54,7 @@ public class Ignore_TrainingMenuValidation extends BaseClass{
 		
 		dashboard.fn_swithtoCoursesframe();
 			
-		logger.pass("Fetched all the submenus under training");
+		extentTest.pass("Fetched all the submenus under training");
 		
 		Reporter.log("TC003 Complete", true);
 		
