@@ -55,13 +55,14 @@ public class BaseClass {
 	    //configuration items to change the look and feel
         //add content, manage tests etc
 		htmlreporter.config().setReportName("Metro Open ROADM - Regression Test Report");
-		htmlreporter.config().setAutoCreateRelativePathMedia(true);
+		//htmlreporter.config().setAutoCreateRelativePathMedia(true); -- This will create screenshot folder under Reports folder
 		htmlreporter.config().setDocumentTitle("Orange HRM Report");
 		htmlreporter.config().setEncoding("utf-8");
 		htmlreporter.config().setJS("Status Report");
 		htmlreporter.config().setProtocol(Protocol.HTTPS);
 		htmlreporter.config().setTheme(Theme.STANDARD);
 		htmlreporter.config().setTimeStampFormat("MMM dd yyyy HH:mm");
+	
 		
 		extentReport = new ExtentReports();
 		
@@ -124,8 +125,6 @@ public class BaseClass {
 		System.out.println("Running After method Test executed with below status");
 		
 		System.out.println("Current Test Name: "+result.getName());  //Prints the current @Test Method before flushing the report
-		
-		// status values :: 1=Pass, 2 = Fail, 3=Skip
 		
 		System.out.println("Result Status: " + status);
 		
